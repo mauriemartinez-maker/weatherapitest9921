@@ -1,0 +1,14 @@
+{
+  "name": "kisskh-addon",
+  "version": "1.0.0",
+  "description": "Stremio addon for KissKH",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "^1.6.10",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
