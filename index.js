@@ -114,6 +114,7 @@ function extractBlogIdsFromSettings(html) {
 }
 
 function extractPostIdFromEpisodePage(html) {
+    // Fixed regex: replaced &lt; &gt; with < >
     const postIdRegex = /<div[^>]*id="kisskh"[^>]*data-post-id="(\d+)"[^>]*>/;
     const match = html.match(postIdRegex);
     return match && match[1] ? match[1] : null;
@@ -297,7 +298,6 @@ builder.defineSubtitlesHandler(async ({ type, id }) => {
     return { subtitles: [] };
 });
 
-// --- VERCEL EXPORT ---
 // --- VERCEL EXPORT WITH CORS FIX ---
 const router = getRouter(builder.getInterface());
 
